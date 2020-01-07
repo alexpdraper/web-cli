@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "tags": [
+    {
+      "name": "web-cli",
+      "description": "A terminal component for creating a simple web-based CLI/REPL",
+      "properties": [
+        {
+          "name": "prompt",
+          "type": "String",
+          "description": "The prompt prepended to CLI input",
+          "default": ">"
+        }
+      ],
+      "events": [
+        {
+          "name": "cli-input",
+          "description": "Dispatched when the input is submitted"
+        }
+      ],
+      "slots": [],
+      "cssProperties": [
+        {
+          "name": "--web-cli-text-color",
+          "description": "Main text color",
+          "type": "Color",
+          "default": "#f0f0f0"
+        },
+        {
+          "name": "--web-cli-bg-color",
+          "description": "Main background color",
+          "type": "Color"
+        },
+        {
+          "name": "--web-cli-font-family",
+          "description": "Main font family (should be a monospaced font)",
+          "type": "String"
+        },
+        {
+          "name": "--web-cli-radius",
+          "description": "Border radius for the input and output elements",
+          "type": "Number"
+        }
+      ]
+    }
+  ]
+}

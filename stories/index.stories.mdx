@@ -1,0 +1,55 @@
+import { Story, Preview, Meta, Props, html } from '@open-wc/demoing-storybook';
+
+import '../web-cli.js';
+
+<Meta
+  title="WebCli"
+  parameters={{
+    component: "web-cli",
+    options: { selectedPanel: "storybookjs/knobs/panel" }
+  }}
+/>
+
+# WebCli
+
+A component for creating a web CLI/REPL.
+
+## Features:
+
+- a
+- b
+- ...
+
+## How to use
+
+### Installation
+
+```bash
+yarn add web-cli
+```
+
+```js
+import 'web-cli/web-cli.js';
+```
+
+<Preview withToolbar>
+  <Story name="Simple">
+    {html`
+      <web-cli></web-cli>
+    `}
+  </Story>
+</Preview>
+
+## API
+
+<Props of="web-cli" />
+
+## Variations
+
+###### Custom Title
+
+<Story name="Custom Title">
+  {html`
+    <web-cli .title=${'Hello World'}></web-cli>
+  `}
+</Story>

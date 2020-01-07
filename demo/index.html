@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #a8edea;
+      background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+      background-repeat: no-repeat;
+    }
+
+    #demo {
+      margin: 0 auto;
+      padding: 15px;
+      max-width: 700px;
+      box-sizing: border-box;
+    }
+
+    @media (min-width: 768px) {
+      #demo {
+        padding: 40px;
+      }
+    }
+
+    web-cli {
+      --web-cli-font-family: Tabular, Courier, monospace;
+      box-shadow: 0 10px 20px rgba(10, 10, 10, 0.15);
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit-html';
+    import '../web-cli.js';
+
+    const prompt = '⇒';
+    const onCliInput = (event) => {
+      event.target.addLine(`Hello ${event.detail}`);
+    };
+    render(
+      html`
+        <web-cli id="web-cli" .prompt=${prompt} @cli-input=${onCliInput}>
+          some more light-dom
+        </web-cli>
+      `,
+      document.querySelector('#demo')
+    );
+
+    document.getElementById('web-cli').addLine('Who should I say hello to?');
+  </script>
+</body>
+</html>

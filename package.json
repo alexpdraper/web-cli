@@ -36,7 +36,7 @@
     "@open-wc/eslint-config": "^2.0.0",
     "@open-wc/prettier-config": "^0.1.10",
     "husky": "^1.0.0",
-    "lint-staged": "^8.0.0",
+    "lint-staged": "^13.1.0",
     "@open-wc/testing-karma": "^3.0.0",
     "deepmerge": "^3.2.0",
     "@open-wc/testing-karma-bs": "^1.0.0",
